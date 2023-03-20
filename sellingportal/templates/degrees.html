@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>list of degrees</h1>
+<ul>
+{%for degree in degrees %}
+<li>
+<h3>{{degree.student_degree}}</h3></li>
+<!--<h3>{{degree.student_id}}</h3> -->  
+
+{%endfor%}
+</table>
+</ul>
+
+<h1>add new degree</h>
+    <form action="" method="POST">
+        <h1>Register new student</h1>
+ {% csrf_token %}
+ {{ formregister.as_p }}
+ <button type="submit" >add degree</button>
+        <h1>{{msg}}</h1>
+</body>
+</html>
